@@ -29,6 +29,7 @@
         wins++;
         guessesLeft = 9;
         guessedSoFar = [];
+        alert("You Win!")
 
       }
       else {
