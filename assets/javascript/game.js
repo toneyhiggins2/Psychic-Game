@@ -20,16 +20,10 @@
       // Determines which key was pressed.
       var userGuess = event.key;
       guessedSoFar.push(userGuess);
-      guessedSoFarText.textContent = guessedSoFar.join(" ");
 
       // Randomly chooses a choice from the options array. This is the Computer's guess.
       var computerGuess = letterArr[Math.floor(Math.random() * letterArr.length)];
 
-      winsText.textContent = wins;
-      lossesText.textContent = losses;
-      guessesLeftText.textContent = guessesLeft;
-
- 
       if (userGuess === computerGuess) {
 
         wins++;
@@ -47,5 +41,10 @@
           guessesLeft = 9;
           guessedSoFar = [];
       }
+
+      winsText.textContent = wins;
+      lossesText.textContent = losses;
+      guessesLeftText.textContent = guessesLeft;
+      guessedSoFarText.textContent = guessedSoFar.join(" ");
     };
   
